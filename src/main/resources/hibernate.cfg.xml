@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.jboss.org/dtd/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/training1</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="format_sql">false</property>
+		<property name="show_sql">true</property>
+		<property name="minPoolSize">3</property>
+		<property name="maxPoolSize">20</property>
+		
+		<mapping class="snail.certification.pojo.Book" />
+		<mapping class="snail.certification.pojo.BookType" />
+		<mapping class="snail.certification.pojo.Category" />
+		<mapping class="snail.certification.pojo.Company" />
+		<mapping class="snail.certification.pojo.Person" />
+		<mapping class="snail.certification.pojo.PersonBook" />
+		<mapping class="snail.certification.pojo.Role" />
+		<mapping class="snail.certification.pojo.SubCategory" />
+		<mapping class="snail.certification.pojo.User" />
+		<mapping class="snail.certification.pojo.UserRole" />
+		
+	</session-factory>
+</hibernate-configuration>
